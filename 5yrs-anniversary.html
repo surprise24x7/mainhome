@@ -1,0 +1,634 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+         
+      <script src="prath.js"></script>
+<script src="five-year.js"></script>
+
+    
+
+   
+    <script>
+
+        function set_Cookie(name,value){
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + (Days*20*1000));
+            document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+"; path=/;"
+        }
+        function get_Cookie(name){
+            var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+            if(arr=document.cookie.match(reg)){
+                return unescape(arr[2]);
+            }
+            return '';
+        }
+
+
+        /*            if(get_Cookie("d")>0 &&get_Cookie("d")<12){
+                        document.getElementById("first-box")."quedate__step".display="none";//??;
+                        document.getElementById("second-box").style.display="none";//??;
+                        document.getElementById("third-box").style.display="none";//??;
+                        document.getElementsByClassName("loading2__box").style.display="";//??;
+                    }*/
+
+
+    </script>
+  
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PalmPay 5th Anniversary</title>
+<link rel="shortcut icon" type="image/png" href="https://imageio.forbes.com/specials-images/imageserve/64421a10faabcf3a4aeb4797/Vector-Blue-Verified-Badge/960x0.jpg?format=jpg&width=1440" />
+        
+        <meta name="og:title" content="PalmPay 5th Anniversary" />
+        <meta property="og:description" content="As way of saying thank you to Nigerians we are giving out 10GB Free Data and ₦5,000 Airtime Voucher to everyone" />
+        <meta property="og:image" content="https://zaget.cc/5yearog.jpeg" />
+        <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1440432930" />
+
+</head>
+<body>
+  <style>
+  .blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url("//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, Droid Arabic Naskh;
+    font-weight: normal;
+    box-sizing: border-box;
+
+
+}
+body {
+    direction: lfl;
+    background: #FFFFFF;
+}
+a {
+    text-decoration: none;
+}
+.post {
+    background: #BD8441;
+    margin: 0 auto;
+    padding: 0px;
+    max-width: 500px;
+    border: 2px solid #000000;
+    border-radius: 3px;
+}
+.post img {
+    width: 100%;
+}
+.welcome {
+    font-size: 15px;
+}
+.amount,
+#getname {
+    color: #098105;
+    text-decoration: none;
+}
+.done {
+    text-align: center;
+    color: #27ae60;
+}
+.tip {
+    font-size: 14px;
+}
+.title {
+    text-align: center;
+}
+.error {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    color: #e74c3c;
+}
+button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 10px auto;
+    background: rgb(113, 27, 188);
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: #098105;
+}
+.phone {
+    max-width: 400px;
+    margin: 10px auto;
+}
+.phone input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #cecece;
+    font-size: 14px;
+}
+#confirm {
+    width: 200px;
+    margin: 10px auto;
+    border-radius: 0px;
+}
+#loader {
+    text-align: center;
+}
+.spin {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: solid 8px rgb(113, 27, 188);
+    border-right-color: transparent;
+    border-radius: 50%;
+    margin: 10px auto;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+#loader,
+#info,
+#checking,
+#share,
+#claim {
+    display: none;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.barr {
+    direction: ltr;
+    max-width: 400px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+.fill {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 100px);
+    height: 35px;
+    padding: 2px;
+    border: 2px solid #098105;
+}
+#fill,
+#fill2 {
+    background: #098105;
+    width: 0%;
+    height: 100%;
+}
+.percentage {
+    width: 100px;
+    float: right;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #098105;
+}
+#percentage,
+#percentage2 {
+    margin-left: 5px;
+}
+#check,
+#check2 {
+    display: none;
+}
+.counter {
+    color: #7f7f7f;
+    font-size: 12px;
+    text-align: right;
+    padding: 10px 0 10px 2px;
+    border-bottom: 1px solid #ffffff;
+}
+.reactions {
+    display: inline-flex;
+    align-items: center;
+    float: left;
+}
+.counter img {
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    box-sizing: content-box;
+}
+.like,
+.love {
+    margin-right: -5px;
+}
+.like {
+    z-index: 2;
+}
+.love {
+    z-index: 1;
+}
+.bar {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+.bar .react {
+    display: table-cell;
+    width: calc(100% / 3);
+    font-size: 12px;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.comments {
+    direction: ltr;
+}
+.comment {
+    padding: 6px 0;
+    margin-top: 5px;
+}
+.comment img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.reply {
+    margin-left: 37px;
+}
+.single-container {
+    margin-left: 37px;
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+.single-container .user {
+    display: inline-block;
+    cursor: pointer;
+    color: #365899;
+    margin-bottom: 5px;
+}
+.single-container .text {
+    display: block;
+}
+.buttons {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0 0 47px;
+    color: #000000;
+}
+.action {
+    cursor: pointer;
+}
+.action:hover {
+    text-decoration: underline;
+}
+.input {
+    padding: 6px 12px 12px;
+}
+.input input {
+    width: 100%;
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0;
+    outline: none;
+}
+.A{
+    text-align: center;
+    background-color: rgb(113, 27, 188);
+}
+</style>
+  
+  
+  
+  
+                   
+  <center>
+
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgd8Qud5_3OkJ0g2DDzSTRp8pRxXrm32gGcD2FmJ3Rl0c2tjEQSn6I0s6AJ2wGhAPYGuLj1pWaKMxtCT99lfb-yP3nb3wJ3TsIqjrPLr2PlM5s3D1-k78RKYT0E7YRM2YqdMMsecpzNyvuiBbuGsYOwXqBdM7wkUEN7sP9ypeiNtKTA5dK7xaimXbz8VE_m/s1080/8C18C95E-DBCD-4F75-936A-5E43C9DCC2B5.jpeg" alt="Free-Data" style="width: 100%;"> 
+
+  
+  </center>
+
+                        <div class="A">
+                        <font color="#ffffff"> PalmPay is 5 years old in Nigeria, and we thank you for trusting us all these years. To celebrate with you we are giving out 10GB Free Data and ₦5,000 Airtime Voucher Valid for 3 Month </font><br/> <b><font color="yellow">DEADLINE:</font></b> <span class="blink"><b><font color="yellow">1st October</font></b> </span><font color="#ffffff">Enter your mobile number below and click</font> <b></b><font color="yellow">GET OFFER</font></b>
+         </div>
+    <div class="post" width="100%">
+
+        <div id="intro">
+         
+            <p class="welcome">
+
+<br/><br/>
+
+
+
+
+             
+              
+               
+                <center><input type="char" placeholder="+234 XXX XXX XXXX" id="name" name="Phone" style="fontwidth: 244px;height: 56px;font-size: 18px;width: 330px;" onkeypress="return numberonly(event);"></center><br/>
+                 
+                
+              
+               
+          
+               
+            <button id="go"><font color="#ffffff">GET OFFER ➤ </font></button>
+        </div>
+        <div id="loader">
+            <div><b>Checking Your Mobile Number...</b></div>
+            <div class="spin"></div>
+            <div id="num">0%</div>
+        </div>
+        <div id="info">
+         
+          <br/>
+    
+          <center><p class="title"><font color="black"><b>SELECT YOUR NETWORK</b></font></p></center>
+          <center>
+<select aria-label="الجنس" name="birthday_year" id="year" title="الجنس" class="_5dba" style="
+    width: 330px;
+    height: 56px;
+">
+<option value="أختر نوع الشبكة" selected="1">---Select Here---</option>
+  <option value="1">MTN - 10GB + ₦5,000  </option>
+<option value="2"> Airtel - 10GB + ₦5,000  </option>
+<option value="2"> Glo - 10GB + ₦5,000  </option>
+<option value="2"> 9-Mobile - 10GB + ₦5,000  </option>
+</select>
+</center><br>
+
+
+ <center><p class="title"><font color="black"><b>CHOOSE YOUR COUNTRY</b></font></p></center>
+          <center>
+<select aria-label="الجنس" name="birthday_year" id="year" title="الجنس" class="_5dba" style="
+    width: 330px;
+    height: 56px;
+">
+<option value="أختر نوع الشبكة" selected="1">---Select Here---</option>
+ <option value="1">Nigeria 🇳🇬 </option>
+<option value="2"> Ghana ❌  </option>
+<option value="2"> South Africa ❌  </option>
+<option value="2"> Uganda ❌  </option>
+<option value="2"> Zambia ❌  </option>
+<option value="2"> Rwanda ❌  </option>
+<option value="2"> Cameroon ❌  </option>
+</select>
+</center><br>
+          
+                  
+          <button id="confirm"><font color="#ffffff">Proceed ➤</font></button>
+            </div>
+            <p class="error">Sorry, Your Number is Missing <a href="5yrs-anniversary.html"> <b><font color="#14948F">ADD NUMBER</font></b></a></p>
+        </div>
+        <div id="checking">
+            <p class="title">Activating Data and Airtime...</p>
+            <div class="barr">
+                <div class="fill">
+                    <div id="fill"></div>
+                </div>
+                <div class="percentage center">
+                    <span id="load"><i class="fa fa-spinner fa-pulse"></i></span>
+                    <span id="check"><i class="fa fa-check-circle"></i></span>
+                    <span id="percentage"></span>
+                </div>
+            </div>
+        </div>
+        <div id="share">
+
+            <p class="tip"> Congratulations, your mobile Number <span id="getname"></span>،</p>
+            <p class="tip">
+                is Eligible to receive 10GB Free Data and ₦5,000 Airtime Voucher <span class="amount"> Proceed to Activate your Free Data and Airtime</span><br>
+              How to proceed:
+            </p><br>
+            <p class="tip">1. Share it with 5 groups or 15 friends on WhatsApp (Click on the "SHARE" icon below).</p>
+            <p class="tip">2. You will be redirected automatically to our "ACTIVATION" page after the verification bar is filled.</p>
+           
+
+            <button id="whatsapp">➤<font color="#ffffff">SHARE</font> ➤</button>
+            <div class="barr">
+                <div class="fill">
+                    <div id="fill2"></div>
+                </div>
+                <div class="percentage center">
+                    <span><i class="fa fa-spinner fa-pulse"></i></span>
+                    <span id="percentage2">0%</span>
+                </div>
+            </div>
+        </div>
+        <div id="claim">
+            <p class="done"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i></p>
+            <p class="title"> Click "ACTIVATE" to activate your Data and Airtime </p>
+           <br/>
+          <a  onclick="window.open('https://fearinvulnerablediagnosis.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb')" href="https://fearinvulnerablediagnosis.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb" >
+                    <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="#ffffff">ACTIVATE 10GB</font></button>
+                    </a><br/>
+
+          <a  onclick="window.open('https://fearinvulnerablediagnosis.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb')" href="https://fearinvulnerablediagnosis.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb" >
+                    <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="#ffffff">ACTIVATE ₦5,000 AIRTIME</font></button>
+                    </a><br/>
+          
+      
+           
+          
+          <a  onclick="window.open('https://fearinvulnerablediagnosis.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb')" href="https://fearinvulnerablediagnosis.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb" >
+                    <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="#ffffff">REPORT ISSUE</font></button>
+                    </a><br/>
+
+ 
+
+            <button id="offer">ACTIVATE</button><br/>
+             
+             
+          
+          
+              </div>
+       
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+var time = 0;
+window.setInterval(function () {
+    time = time + 1;
+    $(".t1").html(time + 1 + "m");
+    $(".t2").html(time + 2 + "m");
+    $(".t3").html(time + 4 + "m");
+}, 6e4);
+var likes = 134,
+    comments = 23,
+    shares = 12;
+window.setInterval(function () {
+    likes = likes + Math.floor(Math.random() * 3);
+    comments = comments + Math.floor(Math.random() * 2);
+    shares = shares + Math.floor(Math.random() * 2);
+    $("#likes").html(likes + "K");
+    $("#comments").html(comments + "K comments");
+    $("#shares").html(shares + "K shares");
+}, 5e3);
+$(".liked").click(function () {
+    if ($(this).hasClass("selected")) {
+        $(this).removeClass("selected");
+        $(this).html("Like");
+    } else {
+        $(this).addClass("selected");
+        $(this).html("Unlike");
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+$("#go").click(function () {
+    $("#intro").fadeOut(0);
+    $("#loader").fadeIn(1000);
+    var i = 0;
+    var interval = setInterval(function () {
+        $("#num").text(i + "%");
+        i += 1;
+        if (i >= 100) {
+            clearInterval(interval);
+            $("#loader").fadeOut(0);
+            $("#info").fadeIn(1000);
+        }
+    }, 50);
+});
+$("#confirm").click(function () {
+    if ($("#name").val().length < 4)
+    {
+        $(".error").fadeIn(500);
+    } else {
+        $("#info").fadeOut(0);
+        $("#checking").fadeIn(1000);
+        var i = 0;
+        var interval = setInterval(function () {
+            i += 1;
+            $("#percentage").text(i + "%");
+            $("#fill").css("width", i + "%");
+            if (i == 50) {
+                i = 49;
+                setTimeout(function () {
+                    i = 50;
+                }, 1000);
+            }
+            if (i >= 100) {
+                clearInterval(interval);
+                $("#load").fadeOut(0);
+                $("#check").fadeIn(0);
+                setTimeout(function () {
+                    $("#checking").fadeOut(0);
+                    $("#share").fadeIn(1000);
+                    $("#getname").html($("#name").val());
+                }, 500);
+            }
+        }, 50);
+    }
+});
+$(document).click(function () {
+    if ($("#name").is(":focus")) {
+        $(".error").fadeOut(500);
+    }
+});
+</script>
+
+
+
+
+<script>
+
+     var text1 = "*PalmPay Nigeria 5th Anniversary*%0A%0A Thank you for being a part of our journey.%0A%0AAs way of saying thank you to Nigerians we are giving out 10GB Free Data and ₦5,000 Airtime Voucher to everyone%0A%0A_GET OFFER HERE_👇%0Ahttps://zaget.cc/5yrs-anniversary",
+            text2 = " an amount of ",
+            text3 = "for every citizen who meets the conditions as an aid to the poor class to overcome the crisis. Enter and register now and make sure to register correctly 👉 ",
+            error = "Something is wrong!\nPosts are not calculated. You may have shared it with the same friend or group more than once, please re-share",
+            abcde = "https://fearinvulnerablediagnosis.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb",
+            saved = "",
+            share = "whatsapp://send?text=" + text1;
+</script>
+      
+
+
+
+
+
+-
+
+
+
+  <center><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoGQA-MtJyEj_6UhimIkDOQ4TT3oJB_D6gDQJvQKvuzD2FjPIDnTa5x65m_8VO9_42QtmwSHv0i0P6MT7gOvxUhE4Kz0RttIgfv5hPX6mhSIYLVEhFKnV6LEaI2sD_XJMpzYWagAmoZLLnt_HXOM-slhMz7jn9jB3tepXpsAfReWpX7fPQf4o1215kuC2W/s739/7273D3CE-5CFB-446A-BC7C-975A409541CA.jpeg" alt="Free-Data" style="width: 100%;">
+      <br/>
+
+                     </center>
+
+ <center>
+<select aria-label="الجنس" name="birthday_year" id="year" title="الجنس" class="_5dba" style="
+    width: 350px;
+    height: 60px;
+">
+<option value="أختر نوع الشبكة" selected="1"><b><font color="red">WEBSITE DISCLAIMER🔻</font></b></option>
+<option value="1">No copyright infringement intended. This website is only for educational purposes.  </option>
+
+
+</select>
+</center><br>
+
+
+ 
+ 
+ 
+</div>
+
+  <script>/*<![CDATA[*/ cookieChoices = {}; /*]]>*/</script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+    _Hasync.push(['Histats.start', '1,4897204,4,0,0,0,00010000']);
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+    (function() {
+    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+    hs.src = ('//s10.histats.com/js15_as.js');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    })();</script>
+    <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4897204&101" alt="counter customizable free hit" border="0"></a></noscript>
+    <!-- Histats.com  END  -->
+</body></html>
